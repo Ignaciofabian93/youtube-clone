@@ -14,7 +14,7 @@ const Feed = () => {
 
   return (
     <div className="flex flex-col md:flex-row w-full px-4">
-      <div className="flex w-full h-fit md:w-2/12 border-r-2">
+      <div className="flex w-full h-fit md:w-2/12">
         <Sidebar selected={selected} setSelected={setSelected} />
       </div>
       <div className="w-full md:w-10/12">

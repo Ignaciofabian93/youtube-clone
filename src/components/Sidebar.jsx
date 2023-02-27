@@ -4,7 +4,7 @@ import { categories } from "../utils/constants";
 
 const Sidebar = ({ selected, setSelected }) => {
   return (
-    <ul className="sidebar-items flex items-center w-full md:flex-col">
+    <ul className="sidebar-items flex items-center w-full mb-4 md:flex-col">
       {categories.map((items) => (
         <li
           key={items.name}
