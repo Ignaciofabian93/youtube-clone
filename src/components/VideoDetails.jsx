@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { fetchData } from "../utils/fetchData";
 import ReactPlayer from "react-player";
 import { BiLike } from "react-icons/bi";
-import Sidebar from "./Sidebar";
 
 const VideoDetails = () => {
   const [videoDetails, setVideoDetails] = useState();
@@ -20,7 +19,7 @@ const VideoDetails = () => {
 
   console.log("data: ", videoDetails);
 
-  const { snippet, statistics } = videoDetails;
+  // const { snippet, statistics } = videoDetails;
 
   return (
     <div className="flex flex-col items-center w-11/12 h-screen mx-auto">
@@ -31,13 +30,13 @@ const VideoDetails = () => {
       />
       <div className="flex w-full justify-between">
         <div className="flex flex-col w-full mt-4">
-          <h2 className="text-2xl mb-4">{snippet?.title}</h2>
-          <h3 className="text-xl">{snippet?.channelTitle}</h3>
+          <h2 className="text-2xl mb-4">{videoDetails?.snippet?.title}</h2>
+          <h3 className="text-xl">{videoDetails?.snippet?.channelTitle}</h3>
         </div>
         <div className="flex w-fit h-fit mt-4">
           <div className="flex items-center mr-4">
             <BiLike size={16} />
-            <p className="mx-2">{statistics?.likeCount}</p>
+            <p className="mx-2">{videoDetails?.statistics?.likeCount}</p>
           </div>
         </div>
       </div>

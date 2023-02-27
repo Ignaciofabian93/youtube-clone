@@ -15,11 +15,11 @@ const SearchFeed = () => {
   }, [searchTerm]);
 
   return (
-    <div className="flex w-full px-4">
-      <div className="w-2/12">
+    <div className="flex flex-col md:flex-row w-full px-4">
+      <div className="flex w-full h-fit md:w-2/12">
         <Sidebar selected={selected} setSelected={setSelected} />
       </div>
-      <div className="w-10/12">
+      <div className="w-full md:w-10/12">
         <Videos videos={videos} />
       </div>
     </div>
